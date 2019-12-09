@@ -1,4 +1,4 @@
-condition1<-read.csv("Condition_enterotype_runID_fix.csv",header=TRUE)
+condition1<-read.csv("Supplementary_Table_S2.csv",header=TRUE)
 condition1<-condition1[c(2,3,4,5,6,7)]
 condition2<-read.csv("list_condition_complex.csv",header=TRUE)
 condition2<-condition2[c(1,2,3)]
