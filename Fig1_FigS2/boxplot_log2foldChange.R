@@ -1,6 +1,6 @@
 ####  --   ---
 library(xlsx);
-
+############################# --- input file 1,713 human-mouse pairs -- ############################################
 list <- read.xlsx2(file = "list_all.xlsx", sheetIndex = 1, as.data.frame = T );
 
 genus.cutoff = 0.4;
@@ -12,7 +12,7 @@ library(reshape2);
 library("ggplot2");
 
 ###############################################
-##### species level analysis --#####################################################################################################
+##### species level analysis --#####################################################################################
 {
 ### -- use foreach package use 20 CPU --
 	library("foreach");
@@ -26,7 +26,7 @@ library("ggplot2");
 			label <- paste(as.character( list[x,3] ), as.character( list[x,1] ), sep = "-");
 			print(x);
 			print(label);
-
+##########################-- input mapseq results  to do analysis -- ###############################################
 			human.mapseqfile <- paste("/mnt/raid1/liyanze/pair/1/04_mapseq", "/", as.character( list[x,3] ), sep = "");
 			mouse.mapseqfile <- paste("/mnt/raid1/liyanze/pair/1/04_mapseq", "/", as.character( list[x,1] ), sep = "");
 
