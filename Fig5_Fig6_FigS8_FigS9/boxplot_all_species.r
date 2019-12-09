@@ -1,12 +1,6 @@
 
 ############################################################################################---  plot all genus' change in different conditions  -----########################################################
 
-allGenus<-read.csv("Species_reducedAll_Percent.csv",header=TRUE)
-changelist<-read.table("SpeciesChangelist.txt",header=TRUE,sep="\t")
-w<-merge(changelist,allGenus,all=FALSE)
-condition.change<-read.csv("condition_change_moreCondition.csv",header=TRUE)
-w2<-merge(condition.change,w,by="mouse",all=FALSE)
-#write.csv(w2,"species_df_h233.csv")
 
 rbind<-read.csv("species_df_h233.csv",header=TRUE)
 rbind<-rbind[rbind$humanPer>0,]
